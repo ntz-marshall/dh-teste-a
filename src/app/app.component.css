@@ -1,0 +1,145 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+html, body {
+  width: 100%;
+	height: 780px;
+	background: linear-gradient(-45deg, #bd95fd, #400f9b, #23a6d5, #d4fff5);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+  display: flex;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#page {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+}
+
+nav {
+  position: fixed;
+  left: 1;
+  z-index: 50;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 80vh;
+  background: #CCCCFF;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+nav a {
+  font-size: 40px;
+  color: #000;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  position: fixed;
+  background: #61606018;
+  border-radius: 15px;
+  width: 1300px;
+  height: 80vh;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.container section {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100vh;
+  opacity: 0;
+  transition: all ease-in .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container section h1 {
+  color: #fff;
+  font-size: 50px;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+/* Styles applied on trigger */
+
+.container section:target {
+  opacity: 1;
+  position: absolute;
+  left: 1;
+  margin: 68px 0;
+  width: 90%;
+  height: 80%;
+  z-index: 10;
+  border-radius: 15px;
+}
+
+.container section:target h1 {
+  opacity: 0;
+  animation: 2s fadeIn forwards .5s;
+}
+
+.container #home {
+  display: table-column;
+  background: #9044db;
+  margin: 0px auto;
+  width: 1300px;
+  height: 80vh;
+}
+
+.container #services {
+  display: table-column;
+  background: #4d5ce6;
+  margin: 0px auto;
+  width: 1300px;
+  height: 80vh;
+}
+
+.container #about {
+  display: table-column;
+  background: #66dbff;
+  margin: 0px auto;
+  width: 1300px;
+  height: 80vh;
+}
+
+.container #call-us {
+  display: table-column;
+  background: #ddb4ff;
+  margin: 0px auto;
+  width: 1300px;
+  height: 80vh;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1
+  }
+}
